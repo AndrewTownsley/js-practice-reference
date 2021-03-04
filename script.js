@@ -915,7 +915,69 @@ const combined = ages
 // Sum all of the ages with .reduce()
 .reduce((total, age) => (total + age),0);
 
-console.log(combined);
+// console.log(combined);
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const orders = [
+  { orderId: '123', customerId: '123', deliveryDate: '01-01-2020', delivered: true, items: [
+      { productId: '123', price: 55 },
+      { productId: '234', price: 30 },
+  ]},
+  { orderId: '234', customerId: '234', deliveryDate: '01-02-2020', delivered: false, items: [
+      { productId: '234', price: 30 },
+  ]},
+  { orderId: '345', customerId: '234', deliveryDate: '05-01-2020', delivered: true, items: [
+      { productId: '567', price: 30 },
+      { productId: '678', price: 80 },
+  ]},
+  { orderId: '456', customerId: '345', deliveryDate: '12-01-2020', delivered: true, items: [
+      { productId: '789', price: 12 },
+      { productId: '890', price: 90 },
+  ]},
+      { orderId: '578', customerId: '456', deliveryDate: '12-01-2020', delivered: true, items: [
+      { productId: '901', price: 43 },
+      { productId: '123', price: 55 },
+  ]},
+];
+
+// Exercises
+
+// 1) Get a list of the orders for the customer with the ID 234 that have not been delivered.
+const unDelivered234 = orders.filter(function(order) {
+   return order.customerId === '234' 
+      && !order.delivered;
+});
+// ES6 Version------------------
+const unDelivered = orders.filter(order => order.customerId === '234' && !order.delivered);
+// -------------------------------------------------------------------------------------------
+// 2) Create a new property on each order with the total price of items ordered.
+const orderTotal = orders.map(order => ({...order, orderTotal:
+  order.items.reduce((acc, item) =>
+  acc + item.price, 0) }));
+// ------------------------------------------------------------------------------------------------------------
+// 3) Have all the orders been delivered?
+const delivered = orders.every(function(order) {
+  if(order.delivered == false) {
+    return false;
+  }
+});
+// ES6 Version-------------
+const delivered1 = orders.every(order => order.delivered);
+
+// -----------------------------------------------------------------------------------------------------------------
+// 4) Has the customer with ID '123' made any orders?
+const placedOrder = orders.some(function(order) {
+  if(order.customerId == '123') {
+    return true;
+  }
+});
+// ES6 Version-----------------
+const placedOrder1 = orders.some(order => 
+  order.customerId === '123');
+console.log(placedOrder1);
+
+// 5) Have any products with an id of 123 been sold?
 
 
 
@@ -927,6 +989,104 @@ console.log(combined);
 
 
 
+
+
+
+
+
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------------------
+
+// Codewars.....
+
+// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+// Example:
+
+// makeNegative(1); // return -1
+// makeNegative(-5); // return -5
+// makeNegative(0); // return 0
+// makeNegative(0.12); // return -0.12
+
+// function makeNegative(num) {
+//   if(num > 0) {
+//   return num * -1;
+//   } else if
+//       (num === 0) {
+//     return 0;
+//     } else 
+//       return num;
+// }
+
+// // ES6 Version-----------------
+
+// function makeNegative(num) {
+//   return num > 0 ? -num : num;
+// }
+// --------------------
+// function makeNegative(num) {
+//   if ( num > 0 ) {
+//         return -num;
+//     }
+//     else {
+//         return num;
+//     }
+// }
+// ----------------------
+// function makeNegative(num) {
+//   return -Math.abs(num);
+// }
+// // ---------------------
+// function makeNegative(num) {
+//   return num <= 0 ? num : num*-1;
+// }
+
+// -------------------------------------------------------------------------------------------------------
+
+// Exercise 1: Ignore Even
+// In this exercise, you will be counting from 1 - 100. For each odd number, you will print the number to the console. If the number is even, do nothing.
+// Create a for loop that evaluates numbers from 1 to 100.
+// Inside the loop body, write an if/else selection statement that checks whether a number is odd
+// If the number is odd, then print the number to the console, otherwise do nothing and continue to the next number
+
+// for (let i = 1;i < 100; i++) {
+//   if(i % 2 !== 0) {
+//     console.log(i);
+//   }
+// };
+
+
+// Exercise 2 Section
+console.log("EXERCISE 2:\n==========\n");
+
+// Exercise 2: FIZZBUZZ
+// FIZZBUZZ is a very common coding interview problem. Below are the instructions to solving the problem:
+// Create a for loop that evaluates numbers from 1 to 100 like the problem above.
+// Write a if/else selection statement inside the body of the the loop that checks the following:
+// If the number is divisible by 3, then console.log 'FIZZ'
+// If the number is divisible by 5, then console.log 'BUZZ'
+// If the number is divisible by both 3 and 5, then console.log 'FIZZBUZZ'
+// Ex: 15 would print 'FIZZBUZZ', 33 would print 'FIZZ', and 35 would print 'BUZZ'
+
+// Basic For-Loop Solution----------------------------
+
+// for (let i = 1; i < 101; i++) {
+//   if(i % 15 == 0) console.log('FizzBuzz');
+//   else if(i % 3 == 0) console.log('Fizz');
+//   else if(i % 5 == 0) console.log('Buzz');
+//   else
+//   console.log(i);
+// }
+//  --------------------------
+// for(let i=0;i<100;)
+//   console.log(
+//     ( ++i%3 ? '' : 'fizz' ) + 
+//     ( i%5 ? '' : 'buzz' ) || i
+//   )
+// -------------------------------
 
 
 
