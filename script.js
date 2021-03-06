@@ -919,87 +919,6 @@ const combined = ages
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-const orders = [
-  { orderId: '123', customerId: '123', deliveryDate: '01-01-2020', delivered: true, items: [
-      { productId: '123', price: 55 },
-      { productId: '234', price: 30 },
-  ]},
-  { orderId: '234', customerId: '234', deliveryDate: '01-02-2020', delivered: false, items: [
-      { productId: '234', price: 30 },
-  ]},
-  { orderId: '345', customerId: '234', deliveryDate: '05-01-2020', delivered: true, items: [
-      { productId: '567', price: 30 },
-      { productId: '678', price: 80 },
-  ]},
-  { orderId: '456', customerId: '345', deliveryDate: '12-01-2020', delivered: true, items: [
-      { productId: '789', price: 12 },
-      { productId: '890', price: 90 },
-  ]},
-      { orderId: '578', customerId: '456', deliveryDate: '12-01-2020', delivered: true, items: [
-      { productId: '901', price: 43 },
-      { productId: '123', price: 55 },
-  ]},
-];
-
-// Exercises
-
-// 1) Get a list of the orders for the customer with the ID 234 that have not been delivered.
-const unDelivered234 = orders.filter(function(order) {
-   return order.customerId === '234' 
-      && !order.delivered;
-});
-// ES6 Version------------------
-const unDelivered = orders.filter(order => order.customerId === '234' && !order.delivered);
-// -------------------------------------------------------------------------------------------
-// 2) Create a new property on each order with the total price of items ordered.
-const orderTotal = orders.map(order => ({...order, orderTotal:
-  order.items.reduce((acc, item) =>
-  acc + item.price, 0) }));
-// ------------------------------------------------------------------------------------------------------------
-// 3) Have all the orders been delivered?
-const delivered = orders.every(function(order) {
-  if(order.delivered == false) {
-    return false;
-  }
-});
-// ES6 Version-------------
-const delivered1 = orders.every(order => order.delivered);
-
-// -----------------------------------------------------------------------------------------------------------------
-// 4) Has the customer with ID '123' made any orders?
-const placedOrder = orders.some(function(order) {
-  if(order.customerId == '123') {
-    return true;
-  }
-});
-// ES6 Version-----------------
-const placedOrder1 = orders.some(order => 
-  order.customerId === '123');
-console.log(placedOrder1);
-
-// 5) Have any products with an id of 123 been sold?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ---------------------------------------------------------------------------------------------------------------------------------
-// ---------------------------------------------------------------------------------------------------------------------------------
-// ---------------------------------------------------------------------------------------------------------------------------------
-// ---------------------------------------------------------------------------------------------------------------------------------
-
 // Codewars.....
 
 // In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
@@ -1059,8 +978,6 @@ console.log(placedOrder1);
 // };
 
 
-// Exercise 2 Section
-console.log("EXERCISE 2:\n==========\n");
 
 // Exercise 2: FIZZBUZZ
 // FIZZBUZZ is a very common coding interview problem. Below are the instructions to solving the problem:
@@ -1078,16 +995,288 @@ console.log("EXERCISE 2:\n==========\n");
 //   else if(i % 3 == 0) console.log('Fizz');
 //   else if(i % 5 == 0) console.log('Buzz');
 //   else
-//   console.log(i);
-// }
-//  --------------------------
-// for(let i=0;i<100;)
-//   console.log(
-//     ( ++i%3 ? '' : 'fizz' ) + 
-//     ( i%5 ? '' : 'buzz' ) || i
-//   )
-// -------------------------------
+// //   console.log(i);
+// // }
+// //  --------------------------
+// // for(let i=0;i<100;)
+// //   console.log(
+// //     ( ++i%3 ? '' : 'fizz' ) + 
+// //     ( i%5 ? '' : 'buzz' ) || i
+// //   )
+// // -------------------------------
 
+
+// // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// const orders = [
+//   { orderId: '123', customerId: '123', deliveryDate: '01-01-2020', delivered: true, items: [
+//       { productId: '123', price: 55 },
+//       { productId: '234', price: 30 },
+//   ]},
+//   { orderId: '234', customerId: '234', deliveryDate: '01-02-2020', delivered: false, items: [
+//       { productId: '234', price: 30 },
+//   ]},
+//   { orderId: '345', customerId: '234', deliveryDate: '05-01-2020', delivered: true, items: [
+//       { productId: '567', price: 30 },
+//       { productId: '678', price: 80 },
+//   ]},
+//   { orderId: '456', customerId: '345', deliveryDate: '12-01-2020', delivered: true, items: [
+//       { productId: '789', price: 12 },
+//       { productId: '890', price: 90 },
+//   ]},
+// //       { orderId: '578', customerId: '456', deliveryDate: '12-01-2020', delivered: true, items: [
+// //       { productId: '901', price: 43 },
+// //       { productId: '123', price: 55 },
+// //   ]},
+// // ];
+
+// // Exercises
+
+// // 1) Get a list of the orders for the customer with the ID 234 that have not been delivered.
+// const unDelivered234 = orders.filter(function(order) {
+//    return order.customerId === '234' 
+//       && !order.delivered;
+// });
+// // ES6 Version------------------
+// const unDelivered = orders.filter(order => order.customerId === '234' && !order.delivered);
+// // -------------------------------------------------------------------------------------------
+// // 2) Create a new property on each order with the total price of items ordered.
+// const orderTotal = orders.map(order => ({...order, orderTotal:
+//   order.items.reduce((acc, item) =>
+//   acc + item.price, 0) }));
+// // ------------------------------------------------------------------------------------------------------------
+// // 3) Have all the orders been delivered?
+// const delivered = orders.every(function(order) {
+//   if(order.delivered == false) {
+//     return false;
+//   }
+// });
+// // ES6 Version-------------
+// const delivered1 = orders.every(order => order.delivered);
+
+// // -----------------------------------------------------------------------------------------------------------------
+// // 4) Has the customer with ID '123' made any orders?
+// const placedOrder = orders.some(function(order) {
+//   if(order.customerId == '123') {
+//     return true;
+//   }
+// });
+// // ES6 Version-----------------
+// const placedOrder1 = orders.some(order => 
+//   order.customerId === '123');
+
+// // 5) Have any products with an id of 123 been sold?
+// const orderSold = orders.reduce((acc, order) => 
+//   acc + order.items.reduce((acc, item) =>
+//   acc + (item.productId === '123'), 0), 0);
+
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  const users = [
+    { id: '88f24bea-3825-4237-a0d1-efb6b92d37a4', firstName: 'Sam', lastName: 'Hughes' },
+    { id: '2a35032d-e02b-4508-b3b5-6393aff75a53', firstName: 'Terri', lastName: 'Bishop' },
+    { id: '7f053852-7440-4e44-838c-ddac24611050', firstName: 'Jar', lastName: 'Burke' },
+    { id: 'd456e3af-596a-4224-b1dc-dd990a34c9cf', firstName: 'Julio', lastName: 'Miller' },
+    { id: '58a1e37b-4b15-47c1-b95b-11fe016f7b64', firstName: 'Chester', lastName: 'Flores' },
+    { id: 'b4a306cb-8b95-4f85-b9f8-434dbe010985', firstName: 'Madison', lastName: 'Marshall' },
+    { id: '6ee904be-e3b0-41c9-b7a2-5a0233c38e4c', firstName: 'Ava', lastName: 'Pena' },
+    { id: '7f0ce45a-bdca-4067-968b-d908e79276ce', firstName: 'Gabriella', lastName: 'Steward' },
+    { id: '9e525c2d-6fcd-4d88-9ac4-a44eaf3a43e6', firstName: 'Charles', lastName: 'Campbell' },
+    { id: 'e789565f-fa5a-4d5e-8f6c-dd126cf995be', firstName: 'Madison', lastName: 'Lambert' },
+];
+
+const comments = [
+    { userId: '88f24bea-3825-4237-a0d1-efb6b92d37a4', text: 'Great Job!' },
+    { userId: '7f053852-7440-4e44-838c-ddac24611050', text: 'Well done, I think I understand now!' },
+    { userId: 'e789565f-fa5a-4d5e-8f6c-dd126cf995be', text: 'How do you do that? 😲' },
+    { userId: '7f053852-7440-4e44-838c-ddac24611050', text: 'OK great thanks' },
+    { userId: 'b4a306cb-8b95-4f85-b9f8-434dbe010985', text: 'Cool, thanks!' },
+    { userId: '9e525c2d-6fcd-4d88-9ac4-a44eaf3a43e6', text: 'Nice one 😉' },
+    { userId: '6ee904be-e3b0-41c9-b7a2-5a0233c38e4c', text: 'Got it.' },
+    { userId: '9e525c2d-6fcd-4d88-9ac4-a44eaf3a43e6', text: 'Thanks!' },
+    { userId: '58a1e37b-4b15-47c1-b95b-11fe016f7b64', text: 'Cool 😀' },
+    { userId: '6ee904be-e3b0-41c9-b7a2-5a0233c38e4c', text: 'Great stuff!' },
+];
+
+
+// Exercises
+
+
+// 1) What is Madison Marshall's user id?
+const madisonId = users.find(function(user) {
+  if(user.firstName == 'Madison' && user.lastName == 'Marshall') {
+    return user.id;
+  }
+});
+// ES6 Version--------------
+
+const madisonId2 = users.find(user => 
+  (user.firstName == 'Madison' && user.lastName == 'Marshall') ? user.id : '');
+
+
+
+// 2) Who wrote the first comment (assuming the first comment is in position 0 of the comments array)
+const firstComment = users.find(user => user.id === comments[0].userId);
+
+
+// 3) Which user commented 'OK great thanks'?
+
+// First find the ID...
+const okComment = comments.find(comment => 
+  comment.text === 'OK great thanks').userId; 
+// Then use the ID form the above function to get the user name...
+  const commentUser = users.find(user => 
+    user.id === okComment);
+
+
+// 4) Add the user's first and last name to each comment in the comments array
+const addName = comments.map(comment => {
+  const {firstName, lastName} = users.find(user =>
+    user.id === comment.userId);
+    return { ...comment, firstName, lastName};
+});
+console.log(addName);
+
+
+
+// 5) Get a list of the users who haven't commented
+const noComment = users.filter(user => comments.find(comment => comment.userid === user.id));
+
+const noComment1 = users.filter(user => !comments.find(comment => comment.userid === user.id));
+// console.log(noComment1);
+
+
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+
+// Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+
+// Example:
+// n= 5, m=5: 25
+// n=-5, m=5:  0
+
+// function paperwork(n, m) {
+//   if (m < 0 || n < 0) {
+//     return 0;
+//   }
+//   return m * n;
+// }
+
+// //-----------------------
+
+// const paperwork = (n, m) => Math.max(0, n) * Math.max(0, m);
+
+// //----------------------
+
+// function paperwork(n, m) {
+//   return n < 0 || m < 0 ? 0 : n * m;
+
+// --------------------------------------------------------------------------------------------------------------
+
+// Reverse the order of words in a String...
+
+
+// function reverseWords(str){
+//   return str.split(' ').reverse().join(' ');
+// }
+
+// -----------------------------------------------------------------------------------------------------------------
+
+// In this game, the hero moves from left to right. The player rolls the die and moves the number of spaces indicated by the die two times.
+
+// Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
+
+// Example:
+// move(3, 6) should equal 15
+
+// function move (position, roll) {
+//   return position + (roll * 2);
+// }
+
+//---------------------
+
+// const move = (position, roll) => position + (roll * 2);
+
+//------------------------------------------------------------------------------------------------------------------
+
+// Description:
+// Make a simple function called greet that returns the most-famous "hello world!".
+
+// Style Points
+// Sure, this is about as easy as it gets. But how clever can you be to create the most creative hello world you can think of? What is a "hello world" solution you would want to show your friends?
+
+const greet = () => "hello world";
+
+
+// ----------------------------------------------------------------------------------------------------------------
+
+// Finish the uefaEuro2016() function so it return string just like in the examples below:
+
+// uefaEuro2016(['Germany', 'Ukraine'],[2, 0]) // "At match Germany - Ukraine, Germany won!"
+// uefaEuro2016(['Belgium', 'Italy'],[0, 2]) // "At match Belgium - Italy, Italy won!"
+// uefaEuro2016(['Portugal', 'Iceland'],[1, 1]) // "At match Portugal - Iceland, teams played draw."
+
+// function uefaEuro2016(teams, scores){
+//   let winner
+//   if(scores[1] > scores[0]) {
+//    winner = `${teams[1]} won!`;
+//   } else if
+//     (scores[0] > scores[1]){
+//     winner = `${teams[0]} won!`;
+//   } else if 
+//     (scores[1] === scores[0]) {
+//     winner = 'teams played draw.';
+//     }
+//   return `At match ${teams[0]} - ${teams[1]}, ${winner}`;
+// }
+
+// ----------------------------------------------------------------------------------------------------------------
+
+// Write a function which converts the input string to uppercase.
+
+// function makeUpperCase(str) {
+//   return str.toUpperCase();
+// }
+//-------------------------------
+
+// const makeUpperCase = str => str.toUpperCase();
+
+// ----------------------------------------------------------------------------------------------------------------
+
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+// function fakeBin(x){
+//   let result = '';
+//   for(let i = 0; i < x.length; i++){
+//     x[i] < 5 ? result += 0 : result += 1;
+//   }
+//   return result;
+// }
+// //-----------------------------
+// function fakeBin(x) {
+//   return x.split('').map(n => n < 5 ? 0 : 1).join('');
+// }
+// //------------------------------
+// fakeBin = x => x.split('').map(e => e < 5 ? 0 : 1).join('');
+
+// --------------------------------------------------------------------------------------------------------------
+
+// Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+
+// function problem(x){
+//   if(typeof x == 'string') {
+//     return "Error";
+//   } else
+//   return (x * 50) + 6; 
+// }
+// //-------------------------
+
+// const problem = x => typeof x === 'string' ? 'Error' : x * 50 + 6;
+
+// ----------------------------------------------------------------------------------------------------------------
 
 
 
