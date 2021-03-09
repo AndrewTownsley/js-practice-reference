@@ -1277,6 +1277,122 @@ const greet = () => "hello world";
 // const problem = x => typeof x === 'string' ? 'Error' : x * 50 + 6;
 
 // ----------------------------------------------------------------------------------------------------------------
+// Find the longest word in a string...
+
+// function findLongest(str) {
+  
+//   var spl = str.split(" ");
+//   var longest = 0;
+  
+//   for (var i = 0; i < spl.length; i++) {
+//     if (spl[i].length > longest) {
+//       longest = spl[i].length;
+//     }
+// }
+//      return longest;
+// }
+
+//--------------------------------
+// const findLongest = s => Math.max(...s.split(" ").map(x => x.length));
+
+// -------------------------------------------------------------------------------------------
+
+// All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+
+// Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+
+// Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+
+// 1.  Split the animal name into individual characters, making it into an array.
+// 2.  Find the first and last character in the name.
+// 3.  Compare those first and last characters to the first and last letters of the dish name.
+
+// function feast(beast, dish) {
+//   return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1];
+// }
+
+// //---------------------
+
+// function feast(beast, dish) {
+//   if (beast[0] == dish[0] && beast[beast.length - 1] == dish[dish.length - 1]) {
+//     return true;
+//   }
+//   else {return false;}
+// }
+
+// -------------------------------------------------------------------------------------
+
+// The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+
+// For example:
+
+// cockroachSpeed(1.08) == 30
+
+// ------------------------------------------------------------------------
+
+// Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
+
+// Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
+
+
+// function lovefunc(flower1, flower2){
+//   if(flower1 % 2 === 0 && flower2 % 2 !== 0) {
+//     return true;
+//   } else {
+//   if(flower2 % 2 === 0 && flower1 % 2 !== 0) {
+//   return true;
+//   }
+//     return false;
+//   }
+
+//-------------------------
+
+// const lovefunc = (flower1, flower2) => 
+// flower1 % 2 === 0 && flower2 % 2 !== 0 
+// || flower2 % 2 === 0 && flower1 % 2 !== 0 ? true : false;
+
+
+// --------------------------------------------------------------------
+
+// function lovefunc(flower1, flower2){
+//   return flower1 % 2 !== flower2 % 2;
+// }
+
+//-----------------
+
+// function lovefunc(flower1, flower2){
+//   return (flower1 + flower2) % 2 === 1
+// }
+
+//--------------------
+
+// -------------------------------------------------------------------
+
+// Sometimes, I want to quickly be able to convert miles per imperial gallon into kilometers per liter.
+
+// Create an application that will display the number of kilometers per liter (output) based on the number of miles per imperial gallon (input).
+
+// Make sure to round off the result to two decimal points. If the answer ends with a 0, it should be rounded off without the 0. So instead of 5.50, we should get 5.5.
+
+// Some useful associations relevant to this kata: 1 Imperial Gallon = 4.54609188 litres 1 Mile = 1.609344 kilometres
+
+// function converter (mpg) {
+//   let num =  (mpg*(1.609344/4.54609188));
+//   return +num.toFixed(2);
+// }
+// -------------------------
+// function converter(mpg) {
+//   let num =  mpg * .354;
+//   return +num.toFixed(2);
+// }
+//-------------------------
+// function converter (mpg) {
+//   let mpgConvert = (mpg * (1.609344 / 4.54609188));
+//   return +mpgConvert.toFixed(2);
+// }
+// ------------------------------------------------------------------
+
+
 
 
 
