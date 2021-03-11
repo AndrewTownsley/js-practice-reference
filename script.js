@@ -1393,6 +1393,30 @@ const greet = () => "hello world";
 // ------------------------------------------------------------------
 
 
+// Write a function, gooseFilter / goose-filter / goose_filter / GooseFilter, that takes an array of strings as an argument and returns a filtered array containing the same elements but with the 'geese' removed.
+
+// The geese are any strings in the following array, which is pre-populated in your solution:
+
+//1.  .filter() , .includes()
+//2.  Compare the string of goose names to the string of birds.
+//3.  Return the bird names thst are not geese.
+
+// function gooseFilter (birds) {
+//   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+//    return birds.filter(bird => !geese.includes(bird));
+// };
+
+// // ------------------------------
+
+// const GEESE = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+// const gooseFilter = birds => birds.filter(bird => !GEESE.includes(bird));
+// // -------------------------------
+// const gooseFilter = birds =>
+//   (geese => birds.filter(val => !geese.includes(val)))
+//   ([`African`, `Roman Tufted`, `Toulouse`, `Pilgrim`, `Steinbacher`]);
+// ---------------------------------------------------------------
+
+
 
 
 
