@@ -1416,9 +1416,57 @@ const greet = () => "hello world";
 //   ([`African`, `Roman Tufted`, `Toulouse`, `Pilgrim`, `Steinbacher`]);
 // ---------------------------------------------------------------
 
+// .map()
+// .map()
+// .map()
+// .map()
+// .map()
+// .map()
+
+// const arr = [1,2,3,4];
+
+// const arr2 = arr.map(item => {
+//   return `Number:${item}`
+// });
+
+// console.log(arr2);
+
+// const arr2 = arr.map(item => {
+//   return item * 2;
+// });
+
+// console.log(arr2);
 
 
+// .map() and .sort()
+// .map() and .sort()
+// .map() and .sort()
+// .map() and .sort()
+// .map() and .sort()
 
+// const arr = [20, 23, 25, 30, 21, 50, 60];
 
+// const filterArr = arr.filter((num) => num > 19 && num < 30);
+
+// console.log(filterArr);
+
+// const sortFiltered = filterArr.sort((a, b) => a > b ? 1 : -1);
+
+// console.log(sortFiltered);
+
+// .reduce()
+// .reduce()
+// .reduce()
+// .reduce()
+// .reduce()
+// .reduce()
+
+//   const arr = [10, 10, 10, 10, 10];
+
+// const sum = arr.reduce(function(acc, currentValue) {
+//   return acc + currentValue
+// },0 );
+
+// console.log(sum);
 
 
