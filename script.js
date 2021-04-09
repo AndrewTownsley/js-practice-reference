@@ -631,18 +631,6 @@ const isPalindrome = (inStr) => {
 // MAP / FILTER / REDUCE / SORT..............................................
 // MAP / FILTER / REDUCE / SORT..............................................
 // MAP / FILTER / REDUCE / SORT..............................................
-// MAP / FILTER / REDUCE / SORT........................................map......
-// MAP / FILTER / REDUCE / SORT..............................................
-// MAP / FILTER / REDUCE / SORT..............................................
-// MAP / FILTER / REDUCE / SORT..............................................
-// MAP / FILTER / REDUCE / SORT..............................................
-// MAP / FILTER / REDUCE / SORT..............................................
-// MAP / FILTER / REDUCE / SORT..............................................
-// MAP / FILTER / REDUCE / SORT..............................................
-// MAP / FILTER / REDUCE / SORT..............................................
-// MAP / FILTER / REDUCE / SORT..............................................
-// MAP / FILTER / REDUCE / SORT..............................................
-// MAP / FILTER / REDUCE / SORT..............................................
 
 const companies= [
   {name: "Company One", category: "Finance", start: 1981, end: 2004},
@@ -1423,6 +1411,19 @@ const greet = () => "hello world";
 // .map()
 // .map()
 
+// const dummyTransactions = [
+//   { id: 1, text: 'Flower', amount: -20 },
+//   { id: 2, text: 'Salary', amount: 300 },
+//   { id: 3, text: 'Book', amount: -10 },
+//   { id: 4, text: 'Camera', amount: 150 }
+// ];
+
+
+// const amounts = transactions.map((transaction) => transaction.amount);
+
+
+
+
 // const arr = [1,2,3,4];
 
 // const arr2 = arr.map(item => {
@@ -1468,5 +1469,295 @@ const greet = () => "hello world";
 // },0 );
 
 // console.log(sum);
+
+// -----------------------------------------------------------------
+
+// Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+
+// Return your answer as a number.
+
+//1.  Convert the array from mixed types to all Numbers..
+
+//2.  Add all of the numbers in the array with .reduce()...
+
+
+// function sumMix(x){
+//   return x.map(a => +a).reduce((a, b) => a + b);
+// }
+
+
+// function sumMix(x){
+//   let sum = 0;
+//   for (i = 0; i<x.length; i++) {
+//     sum += Number(x[i]);
+//   }
+//   return sum;
+// }
+
+// ---------------------------------------------------------------------------------
+
+// What is the most asked question on CodeWars?
+
+// Can someone explain /*...*/?
+
+// You need to write a function detect that will check if a string starts with Can someone explain, case sensitive. Return true if so, false otherwise.
+
+// // Let's hope you don't write a solution that makes people ask that question at you!
+
+// // function detect(str) {
+// //   let subString = 'Can someone explain ';
+// //   if (str.startsWith(subString)) {
+// //     return true;
+// //   } else 
+// //     return false;
+// // }
+// // =-------------------------------
+
+// // const detect = comment => comment.startsWith('Can someone explain')
+
+
+// console.clear();
+// // -------------------------------------------------------------------------------------------------------------------------------------
+
+// // Higher Order Functions
+
+
+// // sayHi = (name) => `Hi, ${name}!`;
+// // result = sayHi('User');
+// // console.log(result);
+
+// //-----------------------------
+
+// double = (x) => x * 2;
+// result = double(4);
+// // console.log(result);
+// //---------------------------------
+
+// getClearance = (allowed) => (allowed ? 'Access Granted' : 'Access Denied');
+
+// result1 = getClearance(true);
+// result2 = getClearance(false);
+
+// // console.log(result1);
+// // console.log(result2);
+// //------------------------------
+
+// getFirstName = (obj) => obj.firstName;
+// result = getFirstName({
+//   firstName: 'Yazeed'
+// });
+// // console.log(result);
+
+// //-------------------------
+
+// len = (array) => array.length;
+// result = len([1,2,3]);
+// console.log(result);
+
+//-------------------------------------------------------------------------------
+
+// Your task is to create functionisDivideBy (or is_divide_by) to check if an integer number is divisible by each out of two arguments.
+
+// A few cases:
+
+
+// (-12, 2, -6)  ->  true
+// (-12, 2, -5)  ->  false
+
+// (45, 1, 6)    ->  false
+// (45, 5, 15)   ->  true
+
+// (4, 1, 4)     ->  true
+// (15, -5, 3)   ->  true
+
+// const isDivideBy = (num, a, b) => (num % a === 0 && num % b === 0) ? true : false;
+
+
+//-------------------------------
+// function isDivideBy(number, a, b) {
+//   return (number % a === 0 && number % b === 0) ? true : false;
+// }
+
+//----------------------------------------------------
+
+
+// Task
+// Given a list of numbers, return the list so that the values increment by 1 for each index up to the maximum value.
+
+// Example
+// Input: 1,3,5,6,7,8
+
+// Output: 1,2,3,4,5,6,7,8
+
+//---------------------------------
+
+// function pipeFix(numbers){
+//   var first = numbers[0];
+//   var last = numbers[numbers.length-1];
+  
+//   var arr = [];
+//   for(var i = first; i <= last; i++) {
+//     arr.push(i);
+//   }
+//   return arr;
+// }
+
+//-----------------------------
+// let pipeFix = nums => Array.from({ length: nums.pop() - nums[0] + 1 }, (v, i) => i + nums[0]);
+//---------------------------
+// function pipeFix(num, arr = [] ){
+//   for ( let i = num[0]; i <= num.slice(-1)[0]; i++){
+//     arr.push(i)
+//   }
+//   return arr
+// }
+
+
+//------------------------------------------------------------------
+
+// Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+// //----------------------
+// function removeExclamationMarks(s) {
+//   return s.replace(/!/g,'');
+// }
+
+
+
+//-------------------------------------------------------------
+
+// Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+// For example,
+
+// [true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   true,  false, true,  false,
+//   true,  false, false, true ,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]
+// The correct answer would be 17.
+
+// Hint: Don't forget to check for bad values like null/undefined
+
+//---------------------------------------------------
+
+// Implement a function named generateRange(min, max, step), which takes three arguments and generates a range of integers from min to max, with the step. The first integer is the minimum value, the second is the maximum of the range and the third is the step. (min < max)
+
+// generateRange(2, 10, 2) // should return array of [2,4,6,8,10]
+// generateRange(1, 10, 3) // should return array of [1,4,7,10]
+// Note
+// min < max
+// step > 0
+// the range does not HAVE to include max (depending on the step)
+
+//1.  Declare an empty array[].
+//2.  Initialize a count that starts at the MIN.
+//3.  Increment that count by the value of the STEP.
+//4.  Stop the count when it reaches the MAX.
+//5.  push the incremented counter to the empty array[].
+//6.  Return the array[];
+
+
+// const  generateRange = (min, max, step) => {
+//   let arr= [];
+//   let count = min;
+//   for(let i = count; count<= max; count += step) {
+//     arr.push(count);
+//   }
+//   return arr;
+// }
+
+
+//------------------------------------------------------------------------------------------
+
+
+// The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the saving over the normal high street price would effectively cover the cost of your holiday.
+
+// You will be given the high street price (normPrice), the duty free discount (discount) and the cost of the holiday.
+
+// For example, if a bottle cost £10 normally and the discount in duty free was 10%, you would save £1 per bottle. If your holiday cost £500, the answer you should return would be 500.
+
+// All inputs will be integers. Please return an integer. Round down.
+
+//1. Figure out the amount that will be saved per bottle puchased at the discounted price.
+//2. Divide that amount by the total price of the Holiday.
+//3. Round that number down using Math.floor.   
+
+
+// function dutyFree(normPrice, discount, hol){
+//   let savings = normPrice * discount;
+//   return Math.floor(hol/savings * 100);
+// }
+//-----------------------------------------
+// function dutyFree(normPrice, discount, hol){
+//   return(Math.floor(hol / normPrice / discount * 100))
+// }
+//----------------------------------------------
+// const dutyFree = (normPrice, discount, holiday) => {
+//   let savings = normPrice * discount;
+//   return Math.floor(hol/savings * 100);
+// }
+
+///----------------------------------------------------------------------------------------
+
+// There's a "3 for 2" (or "2+1" if you like) offer on mangoes. For a given quantity and price (per mango), calculate the total cost of the mangoes.
+
+//1. You must find 2/3 of the quantity, and use that to calculate the total price.
+//2. discounted quantity = quantity - 1/3 of quantity.
+//3.  Multiply the discounted quantity by the price, and return it as the solution.
+
+
+// function mango(quantity, price){
+//   return price * (quantity - Math.floor(quantity / 3));
+// }
+
+//-------------------------------------
+
+// function mango(quantity, price){
+//   let discountQty = quantity - Math.floor(quantity / 3);
+//   return discountQty * price;
+// }
+
+// ------------------------------------------------------------------------------------------
+
+// Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+// For example,
+
+// [true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   true,  false, true,  false,
+//   true,  false, false, true ,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]
+// The correct answer would be 17.
+
+// Hint: Don't forget to check for bad values like null/undefined
+
+//1.  Use .filter() to filter and count the true values in the array.
+
+// const countSheeps = (arrayOfSheep) => arrayOfSheep.filter(Boolean).length;
+
+//--------------------------------------------------------------------------------------------
+
+// Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+// Example:
+// 348597 => [7,9,5,8,4,3]
+
+//1. First you must convert the number to a String, so that it can be split using the .split('') method.
+//2. Once it has been converted to a string, use .split() method to seperate it into individual digits.
+//3. Then you must convet it back into a number.
+//4. Then you must reverse the array of split numbers you have, adn return that as your solution.
+
+// function digitize(n) {
+//   let string = String(n);
+//   return string.split('').map(Number).reverse();
+// }
+
+
+
+
 
 
