@@ -1774,3 +1774,103 @@ const greet = () => "hello world";
 // }
 
 //----------------------------------------------------------------------------------------------------------------------
+
+// Your function takes two arguments:
+
+// current father's age (years)
+// current age of his son (years)
+// Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).
+
+// const twiceAsOld = (dadYearsOld, sonYearsOld) => {
+//   return (dadYearsOld > sonYearsOld * 2) ? (dadYearsOld - sonYearsOld * 2) : 
+//   (sonYearsOld * 2) - dadYearsOld;
+// } 
+
+//-----------------
+// function twiceAsOld(dadYearsOld, sonYearsOld) {
+//   return Math.abs(dadYearsOld - 2 * sonYearsOld);
+// }
+
+//----------------------------------------------------------------------------------------------------------------------------------
+
+// You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. Considering these factors, write a function that tells you if it is possible to get to the pump or not. Function should return true (1 in Prolog) if it is possible and false (0 in Prolog) if not. The input values are always positive.
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   return mpg * fuelLeft >= distanceToPump ? true : false;
+// };
+//-------------
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   return distanceToPump/mpg <= fuelLeft
+// };
+//------------------------------------------------------------------------------------------------------------------------------
+// You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.
+
+// Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
+
+// For example, update_light('green') should return 'yellow'.
+
+// function updateLight(current) {
+//   if(current == 'green') {
+//     return 'yellow';
+//   } else if 
+//     (current == 'yellow') {
+//       return 'red';
+//       } else 
+//         return 'green';
+// }
+
+//----------------
+// const updateLight = (current) => {
+//   return current == 'green' ? 'yellow' : current == 'yellow' ? 'red' : 'green';
+// } 
+//------------------
+// const updateLight = current => ({
+//   green: 'yellow',
+//   yellow: 'red',
+//   red: 'green',
+// })[current]
+//-----------------
+// function updateLight(current) {
+
+//   switch (current) {
+//     case 'green':
+//       return 'yellow';
+//       break;
+//     case 'yellow':
+//       return 'red';
+//       break;
+//     case 'red':
+//       return 'green';
+//       break;
+//     default:
+//       throw 'Error: wrong input';
+//       break;
+//   }
+  
+// }
+
+//----------------------------------------------------------------------------------------------------------------------------------
+
+// Task Overview:
+// You have to write a function that accepts three parameters:
+
+// cap is the amount of people the bus can hold excluding the driver.
+// on is the number of people on the bus excluding the driver.
+// wait is the number of people waiting to get on to the bus excluding the driver.
+// If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+
+// Usage Examples:
+// cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
+// cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+
+// function enough(cap, on, wait) {
+//   if(cap - on >= wait) {
+//   return 0;
+//   } else 
+//     return wait - (cap - on);
+// }
+
+//---------------------
+// const enough = (cap, on, wait) => {
+//   return cap - on >= wait ? 0 : wait - (cap - on);
+// }
