@@ -1755,9 +1755,22 @@ const greet = () => "hello world";
 //   let string = String(n);
 //   return string.split('').map(Number).reverse();
 // }
+//----------------------------------------------------------------------------------------------
 
+// Given an array of integers your solution should find the smallest integer.
 
+// For example:
 
+// Given [34, 15, 88, 2] your solution will return 2
+// Given [34, -345, -1, 100] your solution will return -345
+// You can assume, for the purpose of this kata, that the supplied array will not be empty.
 
+//------------------------------------------------------------------------------------------------------------------------
 
+// Create a method take that accepts a list/array and a number n, and returns a list/array array of the first n elements from the list/array.
 
+// const take = (arr, n) => {
+//   return arr.slice(0,n);
+// }
+
+//----------------------------------------------------------------------------------------------------------------------
