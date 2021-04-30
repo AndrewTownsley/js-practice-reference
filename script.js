@@ -866,7 +866,7 @@
 
 // // // ES6 Version--------------
 // // const ageSum2 = ages.reduce((acc, value) => 
-// // acc + value);
+// // acc + value, 0);
 
 // // // Another ES6 Version...
 // // const ageSum3 = ages.reduce((total, age) => 
@@ -1902,9 +1902,66 @@
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// function first(arr, n) {
+//   if(n >= 1) {
+//   return arr.slice(0, n);
+//   } else if
+//     (n == 0) {
+//     return [];
+//     } else {
+//       return arr.slice(0, 1);
+// }
+//   }
+
+// //------------------------------------------------------------------------------------------------------------------------------------
+// You will be given an array of objects (hashes in ruby) representing data about developers who have signed up to attend the coding meetup that you are organising for the first time.
+
+// Your task is to return the number of JavaScript developers coming from Europe.
+
+// const countDevelopers = (list) => {
+//   return list.filter((x) => x.continent == "Europe" && x.language == 'JavaScript').length;
+// }
+
+// function countDevelopers(list) {
+//   let counter = 0;
+//   list.filter((x) => {
+//   x.continent == "Europe" && x.language == 'JavaScript' ? counter ++ : 0})
+
+// return counter;
+// }
+//----------------------------------------------------------------------------
+
+// You will be given an array of objects (associative arrays in PHP) representing data about developers who have signed up to attend the next coding meetup that you are organising.
+
+// Your task is to return an array where each object will have a new property 'greeting' with the following string value:
+
+// Hi < firstName here >, what do you like the most about < language here >?
+
+// var list1 = [
+//   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java' },
+//   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python' },
+//   { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby' } 
+// ];
+// your function should return the following array:
+
+// [
+//   { firstName: 'Sofia', lastName: 'I.', country: 'Argentina', continent: 'Americas', age: 35, language: 'Java',
+//     greeting: 'Hi Sofia, what do you like the most about Java?'
+//   },
+//   { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 35, language: 'Python',
+//     greeting: 'Hi Lukas, what do you like the most about Python?'
+//   },
+//   { firstName: 'Madison', lastName: 'U.', country: 'United States', continent: 'Americas', age: 32, language: 'Ruby',
+//     greeting: 'Hi Madison, what do you like the most about Ruby?'
+//   } 
+// ];
 
 
-
+// function greetDevelopers(list) {
+//   list.map((x) => 
+//     x.greeting = (`Hi ${x.firstName}, what do you like the most about ${x.language}?`));
+//     return list;
+// }
 
 
 
