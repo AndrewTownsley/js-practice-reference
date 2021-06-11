@@ -1,69 +1,83 @@
-// Many people know that Apple uses the letter "i" in almost all of its devices to emphasize its personality.
+// Congo recently standardized its storage containers: all pizzas fit inside a cubic crate, 16-inches on a side. The crates are super tough so you can stack them as high as you want.
 
-// And so John, a programmer at Apple, was given the task of making a program that would add that letter to every word. Let's help him do it, too.
+// Write a function box_capacity() that figures out how many crates you can store in a given warehouse. The function should take three arguments: the length, width, and height of your warehouse (in feet) and should return an integer representing the number of boxes you can store in that space.
 
-// Task:
-// Your task is to make a function that takes the value of word and returns it with an "i" at the beginning of the word. For example we get the word "Phone", so we must return "iPhone". But we have a few rules:
+// For example: a warehouse 32 feet long, 64 feet wide, and 16 feet high can hold 13,824 boxes because you can fit 24 boxes across, 48 boxes deep, and 12 boxes high, so box_capacity(32, 64, 16) should return 13824.
 
-// The word should not begin with the letter "I", for example Inspire.
-// The number of vowels should not be greater than or equal to the number of consonants, for example East or Peace. ("y" is considered a consonant)
-// The first letter is not capital, for example road.
-// If the word does not meet the rules, we return "Invalid word".
-
+// Multiply Length, Height, and Width by 12 to convert to inches.
+// Divide the L, W and H by 16.
+// Multiply the three dimensions together to get the total crates.
+// Return the number of crates.
 
 
-function i(word) {
+
+
+
+
+
+
+// // Many people know that Apple uses the letter "i" in almost all of its 
+// // Your task is to make a function that takes the value of word and returns it with an "i" at the beginning of the word. For example we get the word "Phone", so we must return "iPhone". But we have a few rules:
+
+// // The word should not begin with the letter "I", for example Inspire.
+// // The number of vowels should not be greater than or equal to the number of consonants, for example East or Peace. ("y" is considered a consonant)
+// // The first letter is not capital, for example road.
+// // If the word does not meet the rules, we return "Invalid word".
+
+
+
+// function i(word) {
       
-  let vowelCount = 0;
-  const vowels = ["a","e","i","o","u"];
+//   let vowelCount = 0;
+//   const vowels = ["a","e","i","o","u"];
 
-  for(let char of word) {
-    if (vowels.includes(char)) {
-      vowelCount ++;
-    }
-  }
+//   for(let char of word) {
+//     if (vowels.includes(char)) {
+//       vowelCount ++;
+//     }
+//   }
   
-  if (vowelCount >= word.length ||   word.charAt(0) == "i" || word.charAt(0) !== word.charAt(0).toUpperCase()) {
-  return "Invalid word"
-} else
-  return `i${word}`
-}
-// //=======================================================================
+//   if (vowelCount >= word.length ||   word.charAt(0) == "i" || word.charAt(0) !== word.charAt(0).toUpperCase()) {
+//   return "Invalid word"
+// } else
+//   return `i${word}`
+// }
+// // //=======================================================================
 
-// // Split the word into individual characters.
+// // // Split the word into individual characters.
 
-// // Word cannot begin with the letter "i"
-function start(word) {
-  return word.charAt(0);
-}
+// // // Word cannot begin with the letter "i"
+// function start(word) {
+//   return word.charAt(0);
+// }
 
-console.log(start("iInspire"));
-// // Vowels cannot outnumber Consonants.
+// console.log(start("iInspire"));
+// // // Vowels cannot outnumber Consonants.
 
-    //Declare an empty array for the vowels to be added to
-    // Declare an array with the vowels
+//     //Declare an empty array for the vowels to be added to
+//     // Declare an array with the vowels
 
-// First letter cannot be capitalized. 
-
-
+// // First letter cannot be capitalized. 
 
 
-//========================================================================
 
-// Count the number of Vowels in a given "string"
 
-const getCount = (str) => {
-  //Declare an empty array for the vowels to be added to
-  let vowelCount = 0;
-  // Declare an array with the vowels
-  const vowels = ["a","e","i","o","u"];
+// //========================================================================
 
-  for(let char of str) {
-    if (vowels.includes(char)) {
-      vowelCount ++;
-    }
-  }
-  return vowelCount;
-}
+// // Count the number of Vowels in a given "string"
 
-// console.log(getCount("abracadabra"));
+// const getCount = (str) => {
+//   //Declare an empty array for the vowels to be added to
+//   let vowelCount = 0;
+//   // Declare an array with the vowels
+//   const vowels = ["a","e","i","o","u"];
+
+//   for(let char of str) {
+//     if (vowels.includes(char)) {
+//       vowelCount ++;
+//     }
+//   }
+//   return vowelCount;
+// }
+
+// // console.log(getCount("abracadabra"));
