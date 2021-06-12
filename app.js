@@ -1,23 +1,23 @@
 console.log("Does this thing even work??");
-// You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
+// // You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
 
-// Examples
-// [7, 1]  =>  [1, 7]
-// [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4]
-// [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
+// // Examples
+// // [7, 1]  =>  [1, 7]
+// // [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4]
+// // [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
 
 
-let newArray = [3,2,7,9,4,12,56,434,77,65,12,14,32,8,7,69,33,11,65,43];
-const sortArray = (array) => {
-  // Seperate the Odd numbers out of the array.
-  let oddArr = array.filter((num) => num % 2 !== 0);
-  // Sort the Odd numbers in ascending order.
-  return oddArr.sort((a,b) => a-b);
-}
+// let newArray = [3,2,7,9,4,12,56,434,77,65,12,14,32,8,7,69,33,11,65,43];
+// const sortArray = (array) => {
+//   // Seperate the Odd numbers out of the array.
+//   let oddArr = array.filter((num) => num % 2 !== 0);
+//   // Sort the Odd numbers in ascending order.
+//   return oddArr.sort((a,b) => a-b);
+// }
 
-console.log(sortArray(newArray));
+// console.log(sortArray(newArray));
 
-  // Return the sorted array of Odd numbers.
+//   // Return the sorted array of Odd numbers.
 
 
 
